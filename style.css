@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@400;700&display=swap');
+
+body {
+  background-color: #FFEB3B;
+  font-family: "Marhey", sans-serif;
+  color: rgb(0, 4, 61);
+  text-align: center;
+  padding: 3rem;
+  margin: 0;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+  margin-top: 2rem;
+}
+
+.nasheed-button,
+.toggle-theme {
+  position: absolute;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #00b400;
+  transition: transform 0.2s;
+  z-index: 2; /* جعل زر القمر في الأعلى */
+}
+
+.nasheed-button {
+  right: 10px;
+}
+
+.toggle-theme {
+  right: 100px; /* تعديل مكان زر القمر */
+  font-size: 2.5rem;
+}
+
+.nasheed-button:hover,
+.toggle-theme:hover {
+  transform: scale(1.2);
+}
+
+button {
+  font-size: 6rem;
+  padding: 0.01rem 2rem;
+  border: none;
+  border-radius: 100px;
+  background-color: #0051ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Marhey", sans-serif;
+  margin: 1rem;
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+button:not(.toggle-theme):not(.nasheed-button):hover {
+  background-color: #ff0000;
+}
+
+.buttons-container {
+  margin-top: 3rem;
+}
+
+.back-button {
+  position: fixed;
+  top: 30px;
+  left: 5%; /* جعل الزر في الجهة اليسرى */
+  background-color: #15ff00;
+  color: rgb(0, 0, 0);
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Marhey", sans-serif;
+  box-shadow: 0 9px 6px rgb(66, 0, 0);
+  transition: background-color 0.3s, transform 0.3s;
+  z-index: 1; /* جعل زر الرجوع في الأسفل */
+}
+
+.back-button:hover {
+  background-color: #ff9100;
+  transform: scale(1.5);
+}
+
+body.dark-mode {
+  background-color: #030031;
+  color: #ffffff;
+}
+
+body.dark-mode button {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-mode button:hover {
+  background-color: #ff0000;
+}
+
+body.dark-mode .back-button {
+  background-color: #00b400;
+  color: white;
+}
+
+body.dark-mode .back-button:hover {
+  background-color: #ff9100;
+}
+
+body.dark-mode .nasheed-button,
+body.dark-mode .toggle-theme {
+  color: #00ff7f;
+}
+
+/* Media Queries لضبط التنسيق على جميع الأجهزة */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+
+  .buttons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  button {
+    font-size: 4rem;
+    padding: 1rem;
+  }
+
+  .back-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    left: 5%; /* ضبط المسافة لتكون أقرب على الشاشات الصغيرة */
+  }
+
+  .nasheed-button,
+  .toggle-theme {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    font-size: 3.5rem;
+  }
+
+  .buttons-container {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    left: 5%; /* ضبط الزر ليظل متناسقًا مع الحجم */
+  }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تعلم الحروف</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Marhey:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="instruction">
+        <img src="11zon_cropped (1).png" class="arrow-img" alt="سهم">
+      </div>
+      
+
+  <a href="http://127.0.0.1:5500/index.html" class="back-button">🔙 رجوع</a>
+  <button class="nasheed-button" onclick="document.getElementById('nasheedSound').play()">🎵</button>
+  <button class="toggle-theme" onclick="toggleTheme()">🌓</button>
+
+  <audio id="nasheedSound" src="الانشودة.mp3"></audio>
+
+  <h1>🎧 اضغط على الحرف لسماع صوته</h1>
+  <div class="buttons-container">
+    <button onclick="playSound('alefSound')">أ</button>
+    <button onclick="playSound('baaSound')">ب</button>
+    <button onclick="playSound('taaSound')">ت</button>
+    <button onclick="playSound('thaaSound')">ث</button>
+    <button onclick="playSound('jeemSound')">ج</button>
+    <button onclick="playSound('haaSound')">ح</button>
+    <button onclick="playSound('khaaSound')">خ</button>
+    <button onclick="playSound('dalSound')">د</button>
+    <button onclick="playSound('thalSound')">ذ</button>
+    <button onclick="playSound('raaSound')">ر</button>
+    <button onclick="playSound('zaySound')">ز</button>
+    <button onclick="playSound('seenSound')">س</button>
+    <button onclick="playSound('sheenSound')">ش</button>
+    <button onclick="playSound('saadSound')">ص</button>
+    <button onclick="playSound('daadSound')">ض</button>
+    <button onclick="playSound('taaSound2')">ط</button>
+    <button onclick="playSound('thaaSound2')">ظ</button>
+    <button onclick="playSound('ainSound')">ع</button>
+    <button onclick="playSound('ghainSound')">غ</button>
+    <button onclick="playSound('faaSound')">ف</button>
+    <button onclick="playSound('qaafSound')">ق</button>
+    <button onclick="playSound('kaafSound')">ك</button>
+    <button onclick="playSound('laamSound')">ل</button>
+    <button onclick="playSound('meemSound')">م</button>
+    <button onclick="playSound('noonSound')">ن</button>
+    <button onclick="playSound('haaSound2')">هـ</button>
+    <button onclick="playSound('wawSound')">و</button>
+    <button onclick="playSound('yaaSound')">ي</button>
+</div>
+
+<audio id="alefSound" src="الالف.mp3"></audio>
+<audio id="baaSound" src="الباءmp3.mp3"></audio>
+<audio id="taaSound" src="التاء.mp3"></audio>
+<audio id="thaaSound" src="الثاء.mp3"></audio>
+<audio id="jeemSound" src="الجيم.mp3"></audio>
+<audio id="haaSound" src="الحاء.mp3"></audio>
+<audio id="khaaSound" src="الخاء.mp3"></audio>
+<audio id="dalSound" src="الدال.mp3"></audio>
+<audio id="thalSound" src="الذال.mp3"></audio>
+<audio id="raaSound" src="الراء.mp3"></audio>
+<audio id="zaySound" src="الزاء.mp3"></audio>
+<audio id="seenSound" src="السين.mp3"></audio>
+<audio id="sheenSound" src="الشين.mp3"></audio>
+<audio id="saadSound" src="الصاد.mp3"></audio>
+<audio id="daadSound" src="الضاد.mp3"></audio>
+<audio id="taaSound2" src="الطاء.mp3"></audio>
+<audio id="thaaSound2" src="الظاء.mp3"></audio>
+<audio id="ainSound" src="العين.mp3"></audio>
+<audio id="ghainSound" src="الغين.mp3"></audio>
+<audio id="faaSound" src="الفاء.mp3"></audio>
+<audio id="qaafSound" src="القاف.mp3"></audio>
+<audio id="kaafSound" src="الكاف.mp3"></audio>
+<audio id="laamSound" src="اللام.mp3"></audio>
+<audio id="meemSound" src="الميم.mp3"></audio>
+<audio id="noonSound" src="النون.mp3"></audio>
+<audio id="haaSound2" src="الهاء.mp3"></audio>
+<audio id="wawSound" src="الواو.mp3"></audio>
+<audio id="yaaSound" src="الياء.mp3"></audio>
+
+
+  <script>
+    function playSound(id) {
+      const audio = document.getElementById(id);
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+
+</body>
+</html>
